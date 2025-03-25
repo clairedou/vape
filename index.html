@@ -47,13 +47,14 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            max-width: 90%;
+            max-width: 90vw;
             max-height: 90%;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             background: white;
             padding: 10px;
             z-index: 1000;
+            margin: auto;
         }
 
         /* Close button */
@@ -85,17 +86,23 @@
 </head>
 <body>
 
-    <h1>Vape Shop Gallery</h1>
+    <h1>Express News Convenience - Vape</h1>
 
     <div class="gallery">
         <div class="image-container">
-            <button onclick="showImage('image1')">Show Image 1</button>
+            <button onclick="showImage('image1')">Disposable Vapes</button>
         </div>
         <div class="image-container">
-            <button onclick="showImage('image2')">Show Image 2</button>
+            <button onclick="showImage('image2')">Vape Pods</button>
         </div>
         <div class="image-container">
-            <button onclick="showImage('image3')">Show Image 3</button>
+            <button onclick="showImage('image3')">Vape Juice</button>
+        </div>
+        <div class="image-container">
+            <button onclick="showImage('image4')">Vape Kits</button>
+        </div>
+        <div class="image-container">
+            <button onclick="showImage('image5')">Pods</button>
         </div>
     </div>
 
@@ -125,7 +132,23 @@
             <img src="0003.jpg" alt="Vape Product 3">
         </picture>
     </div>
-
+    
+    <div class="popup-image" id="image4">
+        <button class="close-btn" onclick="closeImage()">×</button>
+        <picture>
+            <source srcset="0004.png" media="(max-width: 768px)">
+            <img src="0004.png" alt="Vape Product 4">
+        </picture>
+    </div>
+    
+    <div class="popup-image" id="image5">
+        <button class="close-btn" onclick="closeImage()">×</button>
+        <picture>
+            <source srcset="0005.png" media="(max-width: 768px)">
+            <img src="0005.png" alt="Vape Product 5">
+        </picture>
+    </div>
+    
     <script>
         function showImage(id) {
             document.getElementById(id).style.display = 'block';
